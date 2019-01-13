@@ -1,0 +1,26 @@
+{
+  "name": "talk-the-rise-and-fall-of-a-design-system",
+  "private": true,
+  "main": "index.js",
+  "author": "Ben Scott",
+  "license": "MIT",
+  "scripts": {
+    "start": "reveal-md -w index.md",
+    "build": "reveal-md --static build index.md",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "format": "prettier --write '**/*.{md}'"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.15.3",
+    "reveal-md": "^2.4.1"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": false,
+    "proseWrap":"always"
+  }
+}
