@@ -7,7 +7,8 @@
   "scripts": {
     "start": "reveal-md -w index.md",
     "build": "reveal-md --static build index.md",
-    "predeploy": "npm run build",
+    "clean": "rm -rf build",
+    "predeploy": "npm run clean && npm run build",
     "deploy": "gh-pages -d build",
     "format": "prettier --write '**/*.{md}'"
   },
@@ -21,6 +22,6 @@
     "singleQuote": true,
     "trailingComma": "es5",
     "bracketSpacing": false,
-    "proseWrap":"always"
+    "proseWrap": "always"
   }
 }
