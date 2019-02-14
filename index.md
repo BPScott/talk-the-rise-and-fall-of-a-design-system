@@ -1,7 +1,16 @@
 ---
 title: The rise and fall of a design system
 theme: serif
-css: style.css
+revealOptions:
+  width: 1024
+  height: 768
+  maxScale: 2
+  controls: true
+  progress: true
+  history: true
+  center: true
+  transition: none
+  backgroundTransition: none
 ---
 
 # The Rise & Fall<br>of a Design System

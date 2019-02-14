@@ -1,15 +1,14 @@
 {
   "name": "talk-the-rise-and-fall-of-a-design-system",
   "private": true,
-  "main": "index.js",
   "author": "Ben Scott",
   "license": "MIT",
   "scripts": {
-    "start": "reveal-md -w index.md",
-    "build": "reveal-md --static build index.md",
+    "start": "reveal-md index.md -w --css='style.css'",
+    "build": "reveal-md index.md --static=build --css='style.css' && touch build/.nojekyll",
     "clean": "rm -rf build",
     "predeploy": "npm run clean && npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build --dotfiles",
     "format": "prettier --write '**/*.{md}'"
   },
   "devDependencies": {
