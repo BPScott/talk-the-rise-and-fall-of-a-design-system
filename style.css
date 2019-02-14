@@ -1,0 +1,5 @@
+/* Overrides */
+
+.slides :first-child h1 {
+  font-size: 3em;
+}

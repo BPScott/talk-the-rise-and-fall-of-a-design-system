@@ -1,9 +1,10 @@
 ---
 title: The rise and fall of a design system
-theme: sky
+theme: serif
+css: style.css
 ---
 
-# The rise and fall of a design system
+# The Rise & Fall<br>of a Design System
 
 <small>Ben Scott / [@BPScott](http://twitter.com/BPScott)</small>
 
