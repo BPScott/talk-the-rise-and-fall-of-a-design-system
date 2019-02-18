@@ -43,18 +43,18 @@ some of my experiences at my prior employer back in London.</p>
 - The second didn't go so well
 
 <aside class="notes"><p>From 2013 till early 2018 I worked at the BBC on their /programmes site. They&#39;re
-the permanant digital archive for every TV and Radio show that the BBC has
+the permanent digital archive for every TV and Radio show that the BBC has
 produced in the past decade. Name a TV or Radio show and there shall be a
 webpage there that says when it was aired, who stared in it and what music was
 played. I initially started as a developer on the team, and eventually became
 the team&#39;s technical lead.</p>
 <p>During that time we had two visual redesigns, which resulted in two distinct
 component libraries, both of which I helped architect and evangelise. I consider
-the first successful, but the second faced several issues and ultimatly I feel
+the first successful, but the second faced several issues and ultimately I feel
 it failed to live up to its intent. Now that the dust has settled and with the
-benfit of hindsight I can pick out the good and bad and hopefully idenfify some
+benefit of hindsight I can pick out the good and bad and hopefully identify some
 warning signs you should watch out for.</p>
-<p>But first let&#39;s quickly talk about the deliverables of a design sytem. In my
+<p>But first let&#39;s quickly talk about the deliverables of a design system. In my
 head &quot;implementing a design system&quot; is very wide topic and can be broadly split
 into three areas.</p>
 </aside></script></section><section  data-markdown><script type="text/template">
@@ -63,21 +63,21 @@ into three areas.</p>
 - Standardise patterns
 - Are implementation agnostic
 
-<aside class="notes"><p>In my head a design system itself is quite etheral. It is your rules and names
+<aside class="notes"><p>In my head a design system itself is quite ethereal. It is your rules and names
 and patterns, written in a document somewhere. It sits above any code that you
 write.</p>
 <p>Patterns are the design token level things like &quot;Purple is this specific hex
 code&quot; and &quot;our base font size is this pixel value&quot;, through simple visual
 concepts like &quot;a button looks like this&quot; and including more complex domain
-object like a respresentation of a TV programme that contains a title, synopsis
+object like a representation of a TV programme that contains a title, synopsis
 and preview image.</p>
 <p>Because of this abstract nature a single design system can be implemented in
 multiple ways - in HTML for the web, in android and in iOS applications. If that
 is the case your system shall probably have something to say about how to
 integrate environment-level conventions like &quot;buttons should look like the OS
 buttons in native apps&quot;.</p>
-<p>Ad now point here doe have any code, that comes at the next tiers where you
-start writing these common ideas into your application.</p>
+<p>At no point here doe have any code, that comes at the next tiers where you start
+writing these common ideas into your application.</p>
 </aside></script></section><section  data-markdown><script type="text/template">
 ## Component Libraries
 
@@ -107,8 +107,9 @@ which are documented within
 ## Styleguides
 
 <aside class="notes"><p>Your Design System is implemented by your Component Library - or possibly many
-component libraries if you&#39;re building for multiple platforms - which is in turn
-documented by your Styleguide.</p>
+component libraries if you&#39;re building for multiple platforms or have multiple
+teams working on slightly different aspects of a larger product - which is in
+turn documented by a Styleguide.</p>
 <p>With those deliverables in mind lets go back to our implementations at the BBC,
 and look at some of the ways the projects differed, how we approached those
 differences and how that impacted their success.</p>
@@ -118,11 +119,11 @@ differences and how that impacted their success.</p>
 - 2013
 - Amen
 
-<aside class="notes"><p>Our two projects: the 2013 redesign - so named retroactivly because we just
+<aside class="notes"><p>Our two projects: the 2013 redesign - so named retroactively because we just
 called it &quot;the redesign&quot; at the time as there was only one, and Amen named
 because in 2016 we figured we needed that this time we needed a proper codename.</p>
 <p>Both of our projects followed the BBC&#39;s usual design process of UX designers
-producing high fidelity page designs which are the implememnted by a team of
+producing high fidelity page designs which are the implemented by a team of
 developers. It is then the developers job to identify the reusable components
 within the pages designs, then create them - as part of the library - and then
 to create a styleguide to document them for future use.</p>
@@ -132,8 +133,8 @@ deeply ingrained way of working at the BBC and we weren&#39;t in a position to
 challenge that.</p>
 <p>While that style of working remained similar for both our projects, the scope of
 the work differed and in retrospect I feel we underestimated and failed to
-respect that difference and thats what ultimatly lead to my disatisfaction with
-the Amen project.</p>
+respect that difference and thats what ultimately lead to my dissatisfaction
+with the Amen project.</p>
 </aside></script></section><section  data-markdown><script type="text/template">
 ## Vision versus Manpower
 
@@ -147,7 +148,7 @@ component library and the styleguide directly into the application we were
 working on because we knew we didn&#39;t have to worry about external usage. This
 was a small vision that fit the size of our team and all of our work fit our
 existing remit of &quot;work on /programmes&quot;, because of this we were able to
-effectivly execute.</p>
+effectively execute.</p>
 <p>For the Amen redesign we had a grander vision - the powers that be wanted to
 create visual consistency across a pair of sister applications - /programmes and
 /radio. So we said we&#39;d create a shared component library that could be
@@ -163,7 +164,7 @@ with both teams working along side each other we&#39;d be able to deliver.</p>
 <aside class="notes"><p>However it turns out that wasn&#39;t a linear increase in complexity. By introducing
 something shared between teams we now had to consider how to manage that shared
 usage. We had to consider new concerns like versioning numbers, how to handle
-backwards incompatable changes and how to deal with variations of a component
+backwards incompatible changes and how to deal with variations of a component
 that would only be used in a single app.</p>
 <p>We proclaimed that both teams would take equal responsibility for these new
 concerns and that when building components they would be empathic of the other
@@ -182,19 +183,19 @@ people responsible for an product shall tend towards what is most expedient for
 their product, rather than what is best for the collaborative system in the long
 term. Without a dedicated team to work on the shared components we were unable
 to create the space for it to live up to its vision. Our vision was grander than
-what we could acomplish given amount of time and manpower afforded to us.</p>
+what we could accomplish given amount of time and manpower afforded to us.</p>
 </aside></script></section><section  data-markdown><script type="text/template">
 ## Burden of Education
 
 ### <br>
 
-<aside class="notes"><p>This difference in our vision and our ability to execute was particulary stark
+<aside class="notes"><p>This difference in our vision and our ability to execute was particularly stark
 regarding education and sharing of information about the components.</p>
 <p>In the 2013 system our work was contained within a single codebase maintained by
 a four-person team. This smallness meant we could get away with less stringent
 written documentation and rely on oral tradition for sharing information -
-swiveling your chair and asking the person next to you to provide context on why
-something was done in a particular way. Our styleguide still existed and
+swivelling your chair and asking the person next to you to provide context on
+why something was done in a particular way. Our styleguide still existed and
 provided examples what a component and its variants would look like but we could
 get away with not writing in-depth usage instructions, and instead we spent that
 time focused on app build out. This worked really well for our team of four as
@@ -203,12 +204,12 @@ quickly passed around, and we didn&#39;t need to spend time on documentation tha
 wasn&#39;t needed because everybody already knew how things worked and we didn&#39;t
 need to onboard new people.</p>
 <p>In the Amen system however the scope of being used by two dev teams - around 12
-devs overall meant that oral tradition wouldn&#39;t really work - interuping a
+devs overall meant that oral tradition wouldn&#39;t really work - interrupting a
 member of your own team is fine, but you&#39;re a probably little more reticent to
-ask an someone external. There was also now twice as many people to onboard onto
+ask someone external. There was also now twice as many people to onboard onto
 the project which if you&#39;re onboarding by talking to people eats a lot of time.
 At this scale written &quot;getting started&quot; documentation became important as we
-didn&#39;t want developers familar with the system explaining the same concepts
+didn&#39;t want developers familiar with the system explaining the same concepts
 multiple times. I love mentoring but my product owner would have had some raised
 eyebrows if I spent all my time helping the /radio team instead of working on
 /programmes.</p>
@@ -217,7 +218,7 @@ eyebrows if I spent all my time helping the /radio team instead of working on
 
 ### Oral tradition does not scale
 
-<aside class="notes"><p>Once again I dropped the ball. The /radio team were unfamilar with the process
+<aside class="notes"><p>Once again I dropped the ball. The /radio team were unfamiliar with the process
 of using a component library and I and the other lead developer of the initial
 system were unable to make time to fully explain the architecture choices we
 made early in the development of the project, and to assist the /radio team as
@@ -225,14 +226,14 @@ they took their first steps into creating their own components due to our other
 commitments within the /programmes team. We made an attempt at written
 documentation however we didn&#39;t have the time to refine it to account for
 questions we didn&#39;t initially consider.</p>
-<p>This failure to adequatly provide mentoring in the early stages meant that in
+<p>This failure to adequately provide mentoring in the early stages meant that in
 some cases people resorted to cargo-cult programming, and thinking that all
 components had to go into this library instead of only those that would be
 reused across projects, which lead to some resentment as people thought we were
 enforcing requirements on them that did not exist. In retrospect education isn&#39;t
-just about the hows of the system but you also need to set expections around its
-usage - often, these components are suggestions for common cases and it is fine
-to diverge from them and you need to clearly communicate that ideal.</p>
+just about the hows of the system but you also need to set expectations around
+its usage - often these components are suggestions for common cases and it is
+fine to diverge from them and you need to clearly communicate that ideal.</p>
 <p>We also ran into documentation issues as the time pressures from product
 management meant comprehensive documentation for component usage fell by the
 wayside as people became focused on building what was useful for their
@@ -243,7 +244,7 @@ individual application.</p>
 ### <br>
 
 <aside class="notes"><p>The 2013 system&#39;s small scope - focusing on a single application - meant ongoing
-maintenace was straightforward. Building for a single app we could build the
+maintenance was straightforward. Building for a single app we could build the
 component library directly within the application. Tying the system closely to
 the app allowed us to rapidly develop as we were able to see changes within the
 context of our app pages instead of building components isolated from where they
@@ -253,22 +254,23 @@ consumers. That freedom meant we were able to avoid acruing technical debt and
 the dead code of legacy components as we could tidy up all calling sites and
 delete the now unused code all within a single commit.</p>
 <p>Amen&#39;s multiple consumers lead to it being distributed as a library, which
-complicated ongoing maintenace compared to the 2013 system. We now had to deal
+complicated ongoing maintenance compared to the 2013 system. We now had to deal
 with releasing, version numbers, managing breaking changes. Having a change to a
-component be visible within the app also be came more involved as you had to
-make your changes in Amen, get it merged, cut a release, then update your app to
-the newest version of Amen - three extra steps compared to modifying components
-that directly lived within the app. We eventually got into the swing of
-releasing of new versions though. We ended up having an irregular release
-schedule based around when a team needed new features in Amen. An app team was
-free to make changes and cut a new release at almost any time as we kept the
-master branch clean and all work in progress occured within feature branches.</p>
+component be visible within the app also became more involved as you had to make
+your changes in Amen, get it merged, cut a release, then update your app to the
+newest version of Amen - three extra steps compared to modifying components that
+directly lived within the app. We eventually got into the swing of releasing of
+new versions though. We ended up having an irregular release schedule based
+around when a team needed new features in Amen. An app team was free to make
+changes and cut a new release at almost any time as we kept the master branch
+clean and all work in progress occurred within feature branches.</p>
 <p>This mostly worked well however sometimes we ran into issues around breaking
 changes that were desired in one app but not in the other. This lead to some
 duplication of components within the system - which is fine because it was the
 most expedient solution to deliver value for the consuming application - but as
 we didn&#39;t have the time to tidy up after those changes they often persisted for
-a long time which meant the system grew to be more complex that necessary.</p>
+a long time which meant the system grew to be more complex that necessary as it
+contained those unremoved vestiges of legacy components.</p>
 <p>The education shortcomings that I mentioned earlier also had an impact on
 ongoing maintenance, because people were sometimes adding components to Amen
 that were not suited for shared usage the library became more bloated, and the
@@ -288,22 +290,22 @@ weight.</p>
 health of the system after its initial creation - product management told us to
 focus on delivering features within our apps and as a result this maintenance
 work fell by the wayside.</p>
-<p>If you have a decated component library and styleguide you need ensure you have
-the time to work on paying down technical debt and to invest in feautres that
-improve the developer experience of using the library and styleguide.</p>
+<p>If you have a dedicated component library and styleguide you need ensure you
+have the time to work on paying down technical debt and to invest in features
+that improve the developer experience of using the library and styleguide.</p>
 </aside></script></section><section  data-markdown><script type="text/template">
 ## Doing it all over again
 
 <aside class="notes"><p>I stand by the technical decisions we made in Amen - we utilised many now-common
 ideas - colocating styles and templates, using presenter classes and testing the
 html output of a component all in a PHP library in 2015.</p>
-<p>Underestimating the additional effort required when creating a shared system
-that was our downfall. Amen overreached - we tried to do something with
-increased scope but we didn&#39;t have the dedicated time to invest in the
-cross-team education and stewardship of the shared components to ensure it was a
-success. Our vision was greater than our ability to execute.</p>
+<p>Underestimating the additional effort required when creating a shared system was
+our downfall. Amen overreached - we tried to do something with increased scope
+but we didn&#39;t have the dedicated time to invest in the cross-team education and
+stewardship of the shared components to ensure it was a success. Our vision was
+greater than our ability to execute.</p>
 <p>Amen had the goal of reducing effort through sharing code, however all that
-sharing acomplished was tying together two distinct products that had slightly
+sharing accomplished was tying together two distinct products that had slightly
 different priorities, roadmaps, and work cadences. If you&#39;ve ever watched a
 three legged race, you&#39;ll know connecting two things that want to go in a
 similar direction but at a slightly different pace doesn&#39;t really work out.</p>
@@ -330,12 +332,15 @@ can&#39;t contribute a meaningful amount of time to the project.</p>
 <p>At Shopify our Polaris design system has a much larger remit than these BBC
 projects - we aim for it to be used by all product teams within Shopify. In
 order to do that we have a dedicated team to build components, work with
-consumers educate them on how to use and contribuite back to the system and to
+consumers to educate them on how to use and contribute back to the system and to
 create written documentation and examples of component usage. We have the time
 and space to focus on improving Polaris&#39;s features and the developer experience
-of using it and that allows it to be sucessful.</p>
+of using it and that allows it to be successful.</p>
 <p>Our vision is big but so is our ability to live up to it, and two things being
 aligned is what Amen lacked.</p>
+<p>Creating a single shared component library is a laudable end goal but if there
+isn&#39;t the time to invest in it at the moment then duplicating effort to ensure
+individual teams can move at their own pace might be a better tactical choice.</p>
 </aside></script></section><section  data-markdown><script type="text/template">
 # Thank You
 
