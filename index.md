@@ -375,11 +375,18 @@ I stand by the technical decisions we made in Amen - we utilised many now-common
 ideas - colocating styles and templates, using presenter classes and testing the
 html output of a component all in a PHP library in 2015.
 
-Underestimating the additional effort required when creating a shared system was
-our downfall. Amen overreached - we tried to do something with increased scope
-but we didn't have the dedicated time to invest in the cross-team education and
-stewardship of the shared components to ensure it was a success. Our vision was
-greater than our ability to execute.
+Amen's downfall can be attributed to two things: First I underestimated the
+additional effort required when creating a shared system and second I assumed
+product leadership would accept developers spending time to improve the
+component library to allow for long term gains at the expense of short-term
+feature development speed. This is not a criticism of that choice of theirs,
+choosing to provide value to users is always useful but it was the mis-alignment
+of their and my expectations that was the issue.
+
+Amen overreached - we tried to do something with increased scope but we didn't
+have the dedicated time to invest in the cross-team education and stewardship of
+the shared components to ensure it was a success. Our vision was greater than
+our ability to execute.
 
 Amen had the goal of reducing effort through sharing code, however all that
 sharing accomplished was tying together two distinct products that had slightly
