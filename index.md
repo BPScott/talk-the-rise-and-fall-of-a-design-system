@@ -15,7 +15,7 @@ revealOptions:
 
 # The Rise & Fall<br>of a Design System
 
-<small>Ben Scott / [@BPScott](http://twitter.com/BPScott)</small>
+Ben Scott / [@BPScott](http://twitter.com/BPScott)
 
 ---
 
@@ -431,8 +431,6 @@ individual teams can move at their own pace might be a better tactical choice.
 
 # Thank You
 
-### Any Questions?
+### Ben Scott / <a href="http://twitter.com/BPScott">@BPScott</a>
 
-<small>Ben Scott / <a href="http://twitter.com/BPScott">@BPScott</a></small>
-
-<small><a href="http://www.reload.me.uk/talk-the-rise-and-fall-of-a-design-system">reload.me.uk/talk-the-rise-and-fall-of-a-design-system</a></small>
+<a href="http://www.reload.me.uk/talk-the-rise-and-fall-of-a-design-system">reload.me.uk/talk-the-rise-and-fall-of-a-design-system</a>
